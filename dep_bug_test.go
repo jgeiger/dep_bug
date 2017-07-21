@@ -4,9 +4,9 @@ package main
 import (
 	"testing"
 
-	"github.com/stretchr/testify/assert"
+	"github.com/onsi/gomega/format"
 )
 
 func TestSomething(t *testing.T) {
-	assert.Equal(t, 123, 123, "they should be equal")
+	format.MessageWithDiff("hello", "to equal", "goodbye")
 }
